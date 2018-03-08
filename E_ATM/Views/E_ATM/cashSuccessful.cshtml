@@ -1,0 +1,16 @@
+﻿@model E_ATM.Models.Accounts
+@{
+    ViewBag.Title = "cashSuccessful";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Your Cashwithdrawal is successful.</h2>
+<p>Your currrent balance is @Model.Balance</p>
+
+@Html.ActionLink("Back to Option", "Options", "E_ATM", new { cardNumber = Model.CardNumber }, new { hidefocus = "hidefocus" })
+
+<h4>OR</h4>        
+
+@Html.ActionLink("More Transaction click here", "CashWithdrawal", "E_ATM", new { cardNumber = Model.CardNumber }, new { hidefocus = "hidefocus" })
+
+

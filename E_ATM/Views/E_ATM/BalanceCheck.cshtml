@@ -1,0 +1,10 @@
+﻿@model E_ATM.Models.Accounts
+@{
+    ViewBag.Title = "BalanceCheck";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>BalanceCheck</h2>
+<p>Your balance is @Model.Balance</p>
+
+@Html.ActionLink("Back to Options", "Options", "E_ATM", new { CardNumber = Model.CardNumber }, new { hidefocus = "hidefocus" })

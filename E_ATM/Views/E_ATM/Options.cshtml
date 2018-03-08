@@ -1,0 +1,35 @@
+﻿@model E_ATM.Models.Accounts
+@{
+    ViewBag.Title = "Options";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Options</h2>
+
+@using (@Html.BeginForm("BalanceCheck", "E_ATM", new { CardNumber = Model.CardNumber }))
+{
+    <div class="form-group">
+        <button type="submit" class="btn-primary">Balance Check</button>
+    </div>
+}
+
+@using (@Html.BeginForm("CashWithdrawal", "E_ATM", new { CardNumber = Model.CardNumber }))
+{
+    <div class="form-group">
+        <button type="submit" class="btn-primary">Cash Withdrawal</button>
+    </div>
+}
+
+@using (@Html.BeginForm("History", "E_ATM", new { CardNumber = Model.CardNumber }))
+{
+    <div class="form-group">
+        <button type="submit" class="btn-primary">History</button>
+    </div>
+}
+
+@using (@Html.BeginForm("Logout", "E_ATM", new { CardNumber = Model.CardNumber }))
+{
+    <div class="form-group">
+        <button type="submit" class="btn-primary">Exit</button>
+    </div>
+}
